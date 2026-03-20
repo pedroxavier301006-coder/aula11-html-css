@@ -1,0 +1,26 @@
+body {
+    background-color: darkslategray;
+}
+
+@media (min-width: 1000px) {
+    body {
+        background-color: deeppink;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 999px) {
+    body {
+        background-color: chartreuse;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: orange;
+    }
+
+    h1 {
+        font-size: 15px;
+        color: white;
+    }
+}

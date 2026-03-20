@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site com Hover Sonoro</title>
+    <link rel="stylesheet" href="estilizaçãoEx1.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Site com Hover Sonoro</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="imagem">
+            <img src="imagens/power rangers6.webp" alt="Imagem Interativa" id="imagemHover">
+            <p class="legenda">Deixe o mouse sobre a imagem para tocar o som, tire o mouse para parar.</p>
+        </div>
+        <div class="conteudo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur natus aspernatur quia? Voluptate
+                sed nam in culpa laudantium unde. Itaque illo quisquam delectus nam necessitatibus eveniet dolores illum
+                facilis exercitationem!</p>
+            <!-- Botão para voltar -->
+            <button onclick="window.location.href='pagina1.html'" class="btnNavegacao">
+                Voltar para Power Rangers Clássico
+            </button>
+        </div>
+    </div>
+
+    <audio id="somHover"
+        src="imagens/YTDown.com_YouTube_Power-Rangers-Dino-Thunder-Full-Theme_Media_jrdOCSx6C6c_009_128k.mp3"
+        loop></audio>
+
+    <script>
+        const img = document.getElementById("imagemHover");
+        const som = document.getElementById("somHover");
+
+        function tocarSom() { som.currentTime = 0; som.play().catch(() => { console.log("Clique na página para ativar áudio."); }); }
+        function pararSom() { som.pause(); som.currentTime = 0; }
+
+        img.addEventListener("mouseenter", tocarSom);
+        img.addEventListener("mouseleave", pararSom);
+        img.addEventListener("touchstart", tocarSom);
+        img.addEventListener("touchend", pararSom);
+    </script>
+
+</body>
+
+</html>
