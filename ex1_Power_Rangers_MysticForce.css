@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+
+    /* Fundo mágico com roxo + azul */
+    background: radial-gradient(circle at top, #3a0ca3, #000000);
+    color: #ffffff;
+}
+
+/* HEADER estilo místico */
+header {
+    background: linear-gradient(to right, #000000, #240046);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+
+    /* brilho mágico */
+    border-bottom: 4px solid #c77dff;
+    box-shadow: 0 0 15px #c77dff, 0 0 25px #ffd166;
+}
+
+header h1 {
+    /* efeito brilhante tipo magia */
+    text-shadow: 
+        0 0 10px #ffffff,
+        0 0 20px #c77dff,
+        0 0 30px #ffd166;
+}
+
+/* MENU */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #c77dff; /* roxo mágico */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd166; /* dourado mágico */
+    text-shadow: 0 0 10px #ffd166;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    margin-top: 30px;
+
+    background: rgba(10, 0, 30, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+
+    /* aura mágica */
+    box-shadow:
+        0 0 20px #c77dff,
+        0 0 40px #3a0ca3;
+}
+
+/* IMAGEM */
+.container .imagem {
+    margin-right: 20px;
+    border: 3px solid #ffd166; /* dourado */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+}
+
+.container .imagem img {
+    display: block;
+    width: 100%;
+    height: 300px; /* tamanho padrão */
+    object-fit: cover; /* mantém proporção e corta excesso */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* HOVER mágico */
+.container .imagem:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px #c77dff,
+        0 0 40px #ffd166,
+        0 0 60px #ffffff;
+}
+
+.container .imagem:hover img {
+    transform: scale(1.1);
+}
+
+/* LEGENDA */
+.container .imagem .legenda {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+
+    color: #ffd166;
+    font-weight: bold;
+    padding: 6px 0;
+    font-size: 14px;
+
+    text-shadow: 0 0 5px #000;
+}
+
+/* TEXTO */
+.container .conteudo {
+    flex: 1;
+    padding: 10px;
+
+    color: #ffffff;
+    text-shadow: 0 0 5px #000;
+}
+
+/* BOTÃO estilo magia */
+.btnNavegacao {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background: linear-gradient(90deg, #c77dff, #ffd166);
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btnNavegacao:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 15px #c77dff,
+        0 0 25px #ffd166;
+}
+
+/* RESPONSIVO */
+@media (orientation: portrait) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .container .imagem {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Rangers Jungle Fury</title>
+    <link rel="stylesheet" href="ex1_Power_Rangers_JungleFury.css">
+
+    <style>
+        /* Ajuste extra para centralizar e organizar melhor */
+        .conteudo p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        /* Espaçamento entre botões */
+        .conteudo a {
+            display: inline-block;
+            margin: 8px 8px 0 0;
+        }
+
+        /* Efeito extra no título */
+        header h1 {
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🐾 Power Rangers Jungle Fury 🐾</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="imagem">
+            <img src="imagens/power rangers3.jpg" alt="Power Rangers Jungle Fury" id="imagemHover">
+
+            <p class="legenda">
+                Passe o mouse para ouvir o tema de Jungle Fury!
+            </p>
+        </section>
+
+        <section class="conteudo">
+            <p>
+                Power Rangers Fúria da Selva (Power Rangers Jungle Fury) é a 16ª temporada da franquia,
+                baseada em Juuken Sentai Gekiranger. A história gira em torno de guerreiros que dominam
+                espíritos animais para lutar contra forças do mal, trazendo um estilo mais focado em
+                artes marciais e energia selvagem.
+            </p>
+
+            <div class="botoes">
+                <a href="ex1_Power_Rangers.html" class="btnNavegacao">
+                    Power Rangers Mighty Morphin
+                </a>
+
+                <a href="ex1_Power_Rangers_DinoThunder.html" class="btnNavegacao">
+                    Power Rangers Dino Thunder
+                </a>
+
+                <a href="ex1_Power_Rangers_SPD.html" class="btnNavegacao">
+                    Power Rangers SPD
+                </a>
+
+                <a href="ex1_Power_Rangers_MysticForce.html" class="btnNavegacao">
+                    Power Rangers Mystic Force
+                </a>
+
+                <a href="ex1_Power_Rangers_Samurai.html" class="btnNavegacao">
+                    Power Rangers Samurai
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <audio id="somHover" src="imagens/audios/Power Rangers Jungle Fury Full Theme - IntroKingOfMelody (youtube).mp3" loop></audio>
+
+    <script>
+        const img = document.getElementById("imagemHover");
+        const som = document.getElementById("somHover");
+
+        img.addEventListener("mouseenter", () => {
+            som.currentTime = 0;
+            som.play();
+        });
+
+        img.addEventListener("mouseleave", () => {
+            som.pause();
+            som.currentTime = 0;
+        });
+
+        img.addEventListener("touchstart", () => {
+            som.currentTime = 0;
+            som.play();
+        });
+
+        img.addEventListener("touchend", () => {
+            som.pause();
+            som.currentTime = 0;
+        });
+    </script>
+
+</body>
+
+</html>

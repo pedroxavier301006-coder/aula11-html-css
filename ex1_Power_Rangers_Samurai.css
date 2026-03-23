@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+
+    /* Fundo estilo explosão de energia */
+    background: radial-gradient(circle at center, #ff3c00, #8b0000, #000000);
+    color: #ffffff;
+}
+
+/* HEADER estilo Samurai */
+header {
+    background: linear-gradient(to right, #000000, #8b0000);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+
+    /* dourado + vermelho */
+    border-bottom: 4px solid #ffd700;
+    box-shadow: 0 0 20px #ff3c00, 0 0 30px #ffd700;
+}
+
+header h1 {
+    /* brilho estilo energia samurai */
+    text-shadow:
+        0 0 10px #ffffff,
+        0 0 20px #ff3c00,
+        0 0 30px #ffd700;
+}
+
+/* MENU */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #ffd700; /* dourado */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ff3c00;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    margin-top: 30px;
+
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+
+    /* brilho tipo explosão */
+    box-shadow:
+        0 0 25px #ff3c00,
+        0 0 50px #ffd700;
+}
+
+/* IMAGEM */
+.container .imagem {
+    margin-right: 20px;
+    border: 3px solid #ffd700; /* dourado */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+}
+
+.container .imagem img {
+    display: block;
+    width: 100%;
+    height: 300px; /* tamanho padrão */
+    object-fit: cover; /* mantém proporção e corta excesso */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* HOVER estilo ataque samurai */
+.container .imagem:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 25px #ff3c00,
+        0 0 50px #ffd700,
+        0 0 70px #ffffff;
+}
+
+.container .imagem:hover img {
+    transform: scale(1.1);
+}
+
+/* LEGENDA */
+.container .imagem .legenda {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+
+    color: #ffd700;
+    font-weight: bold;
+    padding: 6px 0;
+    font-size: 14px;
+
+    text-shadow: 0 0 5px #000;
+}
+
+/* TEXTO */
+.container .conteudo {
+    flex: 1;
+    padding: 10px;
+
+    color: #ffffff;
+    text-shadow: 0 0 5px #000;
+}
+
+/* BOTÃO estilo Samurai */
+.btnNavegacao {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background: linear-gradient(90deg, #ff3c00, #ffd700);
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btnNavegacao:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px #ff3c00,
+        0 0 30px #ffd700;
+}
+
+/* RESPONSIVO */
+@media (orientation: portrait) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .container .imagem {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

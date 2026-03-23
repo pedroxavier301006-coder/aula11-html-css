@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Rangers SPD</title>
+    <link rel="stylesheet" href="ex1_Power_Rangers_SPD.css">
+
+    <style>
+        /* Ajustes extras */
+        .conteudo p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .conteudo a {
+            display: inline-block;
+            margin: 8px 8px 0 0;
+        }
+
+        header h1 {
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🚓 Power Rangers SPD 🚓</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="imagem">
+            <img src="imagens/power rangers5.jpg" alt="Power Rangers SPD" id="imagemHover">
+
+            <p class="legenda">
+                Passe o mouse para ouvir o tema do SPD!
+            </p>
+        </section>
+
+        <section class="conteudo">
+            <p>
+                Power Rangers SPD (Space Patrol Delta) se passa em um futuro onde humanos e alienígenas convivem na
+                Terra.
+                A SPD é uma força policial intergaláctica responsável por manter a ordem e combater criminosos
+                perigosos.
+                A equipe é formada por Rangers com habilidades especiais, que utilizam tecnologia avançada, estratégia e
+                trabalho em equipe para proteger o planeta.
+            </p>
+
+            <div class="botoes">
+
+                <a href="ex1_Power_Rangers.html" class="btnNavegacao">
+                    Power Rangers Mighty Morphin
+                </a>
+
+                <a href="ex1_Power_Rangers_DinoThunder.html" class="btnNavegacao">
+                    Power Rangers Dino Thunder
+                </a>
+
+                <a href="ex1_Power_Rangers_MysticForce.html" class="btnNavegacao">
+                    Power Rangers Mystic Force
+                </a>
+
+                <a href="ex1_Power_Rangers_JungleFury.html" class="btnNavegacao">
+                    Power Rangers Jungle Fury
+                </a>
+
+                <a href="ex1_Power_Rangers_Samurai.html" class="btnNavegacao">
+                    Power Rangers Samurai
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <audio id="somHover" src="imagens/audios/Power Rangers S.P.D. Full Theme - IntroKingOfMelody (youtube).mp3" loop></audio>
+
+    <script>
+        const img = document.getElementById("imagemHover");
+        const som = document.getElementById("somHover");
+
+        img.addEventListener("mouseenter", () => {
+            som.currentTime = 0;
+            som.play();
+        });
+
+        img.addEventListener("mouseleave", () => {
+            som.pause();
+            som.currentTime = 0;
+        });
+
+        img.addEventListener("touchstart", () => {
+            som.currentTime = 0;
+            som.play();
+        });
+
+        img.addEventListener("touchend", () => {
+            som.pause();
+            som.currentTime = 0;
+        });
+    </script>
+
+</body>
+
+</html>

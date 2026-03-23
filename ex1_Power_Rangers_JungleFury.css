@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+
+    /* Fundo estilo selva + energia */
+    background: radial-gradient(circle at top, #2e7d32, #000000);
+    color: #ffffff;
+}
+
+/* HEADER estilo Jungle Fury */
+header {
+    background: linear-gradient(to right, #000000, #1b5e20);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+
+    /* amarelo + vermelho da imagem */
+    border-bottom: 4px solid #ffcc00;
+    box-shadow: 0 0 15px #ffcc00, 0 0 25px #ff0000;
+}
+
+header h1 {
+    /* efeito energia animal */
+    text-shadow: 
+        0 0 10px #ffffff,
+        0 0 20px #ffcc00,
+        0 0 30px #ff0000;
+}
+
+/* MENU */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #ffcc00; /* amarelo */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0000; /* vermelho */
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    margin-top: 30px;
+
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+
+    /* brilho estilo energia */
+    box-shadow:
+        0 0 20px #ffcc00,
+        0 0 40px #1b5e20;
+}
+
+/* IMAGEM */
+.container .imagem {
+    margin-right: 20px;
+    border: 3px solid #ffcc00; /* dourado/amarelo */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+}
+
+.container .imagem img {
+    display: block;
+    width: 100%;
+    height: 300px; /* tamanho padrão */
+    object-fit: cover; /* mantém proporção e corta excesso */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* HOVER estilo poder animal */
+.container .imagem:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px #ffcc00,
+        0 0 40px #ff0000,
+        0 0 60px #ffffff;
+}
+
+.container .imagem:hover img {
+    transform: scale(1.1);
+}
+
+/* LEGENDA */
+.container .imagem .legenda {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+
+    color: #ffcc00;
+    font-weight: bold;
+    padding: 6px 0;
+    font-size: 14px;
+
+    text-shadow: 0 0 5px #000;
+}
+
+/* TEXTO */
+.container .conteudo {
+    flex: 1;
+    padding: 10px;
+
+    color: #ffffff;
+    text-shadow: 0 0 5px #000;
+}
+
+/* BOTÃO estilo Jungle Fury */
+.btnNavegacao {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background: linear-gradient(90deg, #ff0000, #ffcc00);
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btnNavegacao:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 15px #ff0000,
+        0 0 25px #ffcc00;
+}
+
+/* RESPONSIVO */
+@media (orientation: portrait) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .container .imagem {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

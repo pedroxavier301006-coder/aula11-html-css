@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Rangers Mighty Morphin</title>
+    <link rel="stylesheet" href="ex1_Power_Rangers.css">
+
+    <style>
+        /* Ajustes extras */
+        .conteudo p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .conteudo a {
+            display: inline-block;
+            margin: 8px 8px 0 0;
+        }
+
+        header h1 {
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>⚡ Power Rangers Mighty Morphin ⚡</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="imagem">
+            <img src="imagens/power rangers.jpg" alt="Power Rangers Mighty Morphin" id="imagemHover">
+
+            <p class="legenda">
+                Passe o mouse para ouvir o tema clássico!
+            </p>
+        </section>
+
+        <section class="conteudo">
+            <p>
+                Mighty Morphin Power Rangers é a série que deu origem ao fenômeno mundial da franquia.
+                Lançada em 1993, acompanha um grupo de adolescentes escolhidos para proteger a Terra
+                contra ameaças alienígenas. Com a capacidade de se transformar em heróis e controlar
+                robôs gigantes chamados Zords, a equipe se tornou um ícone da cultura pop dos anos 90,
+                marcando gerações com ação, trabalho em equipe e aventura.
+            </p>
+
+            <div class="botoes">
+
+                <a href="ex1_Power_Rangers_DinoThunder.html" class="btnNavegacao">
+                    Power Rangers Dino Thunder
+                </a>
+
+                <a href="ex1_Power_Rangers_SPD.html" class="btnNavegacao">
+                    Power Rangers SPD
+                </a>
+
+                <a href="ex1_Power_Rangers_MysticForce.html" class="btnNavegacao">
+                    Power Rangers Mystic Force
+                </a>
+
+                <a href="ex1_Power_Rangers_JungleFury.html" class="btnNavegacao">
+                    Power Rangers Jungle Fury
+                </a>
+
+                <a href="ex1_Power_Rangers_Samurai.html" class="btnNavegacao">
+                    Power Rangers Samurai
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <audio id="somHover"
+        src="imagens/audios/Mighty Morphin Power Rangers Full Theme - MeyselGamer YT (youtube).mp3"
+        loop></audio>
+
+    <script>
+        const img = document.getElementById("imagemHover");
+        const som = document.getElementById("somHover");
+
+        img.addEventListener("mouseenter", () => {
+            som.currentTime = 0;
+            som.play();
+        });
+
+        img.addEventListener("mouseleave", () => {
+            som.pause();
+            som.currentTime = 0;
+        });
+
+        img.addEventListener("touchstart", () => {
+            som.currentTime = 0;
+            som.play();
+        });
+
+        img.addEventListener("touchend", () => {
+            som.pause();
+            som.currentTime = 0;
+        });
+    </script>
+
+</body>
+
+</html>

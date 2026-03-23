@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Rangers Dino Thunder</title>
+    <link rel="stylesheet" href="ex1_Power_Rangers_DinoThunder.css">
+
+    <style>
+        /* BOTÃO AGORA COM CORES DO CSS */
+        .btnNavegacao {
+            display: inline-block;
+            padding: 10px 20px;
+
+            /* amarelo + vermelho igual ao site */
+            background: linear-gradient(90deg, #ffd500, #f20000);
+            color: #000;
+
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 10px;
+
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btnNavegacao:hover {
+            transform: scale(1.05);
+
+            /* brilho igual ao container */
+            box-shadow:
+                0 0 15px #ffd500,
+                0 0 25px #f20000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Power Rangers Dino Thunder</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="imagem">
+            <img src="imagens/power rangers6.webp" alt="Power Rangers Dino Thunder" id="imagemHover">
+            <p class="legenda">Passe o mouse para ouvir o tema de Dino Thunder!</p>
+        </div>
+
+        <div class="conteudo">
+            <p>
+                Power Rangers: Dino Trovão (ou Power Rangers: Dino Thunder, o nome original) é a décima-segunda
+                temporada de Power Rangers, sendo uma adaptação de Bakuryuu Sentai Abaranger para o público
+                norte-americano...
+            </p>
+
+            <!-- LINKS -->
+            <a href="ex1_Power_Rangers.html" class="btnNavegacao">
+                Power Rangers Mighty Morphin
+            </a>
+
+            <a href="ex1_Power_Rangers_SPD.html" class="btnNavegacao">
+                Power Rangers SPD
+            </a>
+
+            <a href="ex1_Power_Rangers_JungleFury.html" class="btnNavegacao">
+                Power Rangers Jungle Fury
+            </a>
+
+            <a href="ex1_Power_Rangers_MysticForce.html" class="btnNavegacao">
+                Power Rangers Mystic Force
+            </a>
+
+            <a href="ex1_Power_Rangers_Samurai.html" class="btnNavegacao">
+                Power Rangers Samurai
+            </a>
+        </div>
+    </div>
+
+    <audio id="somHover"
+        src="imagens/audios/Power Ranger Dino Thunder Theme (The FestEvil Version) - The FestEvil (youtube).mp3"
+        loop></audio>
+
+    <script>
+        const img = document.getElementById("imagemHover");
+        const som = document.getElementById("somHover");
+
+        function tocarSom() {
+            som.currentTime = 0;
+            som.play().catch(() => {
+                console.log("Clique na página para ativar áudio.");
+            });
+        }
+
+        function pararSom() {
+            som.pause();
+            som.currentTime = 0;
+        }
+
+        img.addEventListener("mouseenter", tocarSom);
+        img.addEventListener("mouseleave", pararSom);
+        img.addEventListener("touchstart", tocarSom);
+        img.addEventListener("touchend", pararSom);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+
+    /* Fundo inspirado no azul espacial da imagem */
+    background: radial-gradient(circle at top, #0d47a1, #000000);
+    color: #ffffff;
+}
+
+/* HEADER inspirado no logo SPD */
+header {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+
+    /* detalhe azul + vermelho do logo */
+    border-bottom: 4px solid #00bfff;
+    box-shadow: 0 0 15px #00bfff, 0 0 25px #ff1e1e;
+}
+
+header h1 {
+    /* efeito metálico/brilho do logo */
+    text-shadow: 
+        0 0 10px #ffffff,
+        0 0 20px #00bfff,
+        0 0 30px #ff1e1e;
+}
+
+/* MENU */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #00bfff; /* azul do SPD */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff1e1e; /* vermelho do SPD */
+    text-shadow: 0 0 10px #ff1e1e;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    margin-top: 30px;
+
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+
+    /* brilho igual ao fundo da imagem */
+    box-shadow:
+        0 0 20px #00bfff,
+        0 0 40px #002f6c;
+}
+
+/* IMAGEM */
+.container .imagem {
+    margin-right: 20px;
+    border: 3px solid #ffffff; /* branco metálico */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+}
+
+.container .imagem img {
+    display: block;
+    width: 100%;
+    height: 300px; /* tamanho padrão */
+    object-fit: cover; /* mantém proporção e corta excesso */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* HOVER estilo energia da moto */
+.container .imagem:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 20px #00bfff,
+        0 0 40px #ff1e1e,
+        0 0 60px #ffffff;
+}
+
+.container .imagem:hover img {
+    transform: scale(1.1);
+}
+
+/* LEGENDA */
+.container .imagem .legenda {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+
+    color: #00bfff;
+    font-weight: bold;
+    padding: 6px 0;
+    font-size: 14px;
+
+    text-shadow: 0 0 5px #000;
+}
+
+/* TEXTO */
+.container .conteudo {
+    flex: 1;
+    padding: 10px;
+
+    color: #ffffff;
+    text-shadow: 0 0 5px #000;
+}
+
+/* BOTÃO estilo SPD (luz policial) */
+.btnNavegacao {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background: linear-gradient(90deg, #ff1e1e, #00bfff);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btnNavegacao:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 15px #ff1e1e,
+        0 0 25px #00bfff;
+}
+
+/* RESPONSIVO */
+@media (orientation: portrait) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .container .imagem {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
